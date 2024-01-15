@@ -17,8 +17,10 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-const csvFile = "assets/majestic_million.csv"
-const totalWorker = 100
+const (
+	csvFile     = "assets/majestic_million.csv"
+	totalWorker = 80
+)
 
 var dataHeaders = make([]string, 0)
 
