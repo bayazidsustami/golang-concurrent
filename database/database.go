@@ -1,6 +1,9 @@
 package database
 
-import "database/sql"
+import (
+	"database/sql"
+	"log"
+)
 
 const (
 	dbConnectionStr = "root:@tcp(localhost:3306)/majestic_million"
@@ -11,6 +14,7 @@ const (
 )
 
 func OpenDBConnection() (*sql.DB, error) {
+	log.Println("=> open db connection")
 
 	db, err := sql.Open("mysql", dbConnectionStr)
 	if err != nil {
