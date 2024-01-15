@@ -9,8 +9,6 @@ const (
 	dbConnectionStr = "root:@tcp(localhost:3306)/majestic_million"
 	dbMaxIdleConns  = 4
 	dbMaxConns      = 100
-	totalWorker     = 100
-	csvFile         = "majestic_million.csv"
 )
 
 func OpenDBConnection() (*sql.DB, error) {
